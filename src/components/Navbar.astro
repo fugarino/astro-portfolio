@@ -2,17 +2,57 @@
 ---
 
 <style lang="scss">
-  nav {
-    background-color: aliceblue;
+  @mixin flexCenter($justify-content) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+  }
 
-    h1 {
-      color: aqua;
+  nav {
+    @include flexCenter(space-between);
+    // background-color: aliceblue;
+    padding: 0.3rem 2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    div {
+      @include flexCenter(center);
+
+      .logo {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--orange);
+        cursor: pointer;
+      }
+
+      aside {
+        font-size: 0.8rem;
+        margin-left: 20px;
+        color: var(--gray-dark);
+        position: relative;
+        top: 6px;
+
+        a {
+          cursor: pointer;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
     }
   }
 </style>
 
 <nav>
   <div>
-    <a>CRIS</a>
+    <a href="/" class="logo">CRIS</a>
+    <aside>
+      <a>download cv</a> / <a>copy email</a>
+    </aside>
   </div>
+  <menu>
+    <button>click me</button>
+  </menu>
 </nav>
