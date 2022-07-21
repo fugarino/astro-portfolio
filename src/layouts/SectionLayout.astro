@@ -1,0 +1,22 @@
+---
+const { sectionName } = Astro.props;
+---
+
+<style>
+  section {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    font-family: "Kalam";
+    font-weight: 300;
+    color: var(--gray-light);
+    display: inline-block;
+  }
+</style>
+
+<section>
+  <span>{`<${sectionName}>`}</span>
+  <slot></slot>
+  <span>{`</${sectionName}>`}</span>
+</section>
