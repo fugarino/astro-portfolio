@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import MenuButton from "./UI/MenuButton";
 import styles from "../styles/menu.module.scss";
 
 const Menu: FC = () => {
@@ -10,7 +11,7 @@ const Menu: FC = () => {
 
   return (
     <menu className={menuOpen ? styles.menu : ""}>
-      <button onClick={handleClick}>Click me</button>
+      <MenuButton onClick={handleClick} text="Click me" />
       <ul className={!menuOpen ? styles.list : ""}>
         <li>About</li>
         <li>Projects</li>
