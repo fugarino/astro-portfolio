@@ -1,0 +1,36 @@
+.button {
+  border: none;
+  width: 35px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--background-light);
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    background-color: var(--blue-dark-1);
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+  }
+  &::before {
+    position: relative;
+    top: 2.5px;
+  }
+  &::after {
+    position: relative;
+    bottom: 2.5px;
+  }
+}
+
+.open {
+  &::before {
+    transform: translateY(5.2px) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(-5.2px) rotate(-45deg);
+  }
+}
