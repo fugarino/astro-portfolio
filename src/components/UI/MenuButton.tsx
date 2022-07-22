@@ -4,6 +4,7 @@ import styles from "../../styles/menuButton.module.scss";
 const MenuButton: FC = ({ onClick, menuOpen }) => {
   return (
     <button
+      aria-label="menu"
       className={`${styles.button} ${menuOpen ? styles.open : ""}`}
       onClick={onClick}
     ></button>
