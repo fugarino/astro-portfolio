@@ -1,5 +1,6 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
+import Name from "./Name";
 ---
 
 <style lang="scss">
@@ -105,7 +106,8 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     </aside>
     <!-- Text -->
     <div class="hero-text">
-      <h1>Christian Fugarino</h1>
+      <!-- <h1>Christian Fugarino</h1> -->
+      <Name client:load />
       <h2>FRONT END DEVELOPER</h2>
       <p>
         Hi, I'm Christian. I know how to center a div.<br />Also, cats are better than dogs.
