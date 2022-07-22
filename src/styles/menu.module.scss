@@ -21,13 +21,10 @@ $slidein: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   @include flexCenter(flex-end);
   position: fixed;
   top: 0;
-  // left: 0;
   width: 100%;
   height: 100vh;
   padding: 0.56rem 4rem;
   max-width: 1800px;
-  // margin: 0 auto;
-  // padding-right: calc(2rem + 15px);
   background-color: (var(--background-light));
   transition: background-color 0.3s ease;
 
@@ -36,7 +33,7 @@ $slidein: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     height: 95%;
     list-style: none;
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--blue-dark-1);
     transform: translateX(-40px);
@@ -68,7 +65,7 @@ $slidein: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
       }
 
       &:hover {
-        color: #000;
+        color: var(--orange);
       }
     }
   }
