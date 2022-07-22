@@ -1,5 +1,6 @@
 ---
 import Menu from "./Menu";
+import CvEmail from "./UI/CvEmail.astro";
 ---
 
 <style lang="scss">
@@ -27,21 +28,6 @@ import Menu from "./Menu";
         color: var(--orange);
         cursor: pointer;
       }
-
-      aside {
-        font-size: 0.8rem;
-        margin-left: 20px;
-        color: var(--gray-dark);
-        position: relative;
-        top: 6px;
-
-        a {
-          cursor: pointer;
-          &:hover {
-            color: #000;
-          }
-        }
-      }
     }
   }
 </style>
@@ -49,9 +35,7 @@ import Menu from "./Menu";
 <nav>
   <div>
     <a href="/" class="logo">CRIS</a>
-    <aside>
-      <a>download cv</a> / <a>copy email</a>
-    </aside>
+    <CvEmail />
   </div>
   <Menu client:load />
 </nav>
