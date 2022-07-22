@@ -2,6 +2,7 @@
 import SectionLayout from "../layouts/SectionLayout.astro";
 import Socials from "./UI/Socials.astro";
 import Name from "./Name";
+import ContactButton from "./UI/ContactButton.astro";
 ---
 
 <style lang="scss">
@@ -23,11 +24,6 @@ import Name from "./Name";
       max-width: 635px;
       margin: 0 auto;
 
-      h1 {
-        font-size: clamp(2.5rem, 4vw, 5rem);
-        color: var(--blue-dark-0);
-      }
-
       h2 {
         font-size: clamp(1.25rem, 2vw, 2rem);
         font-weight: 500;
@@ -38,29 +34,6 @@ import Name from "./Name";
         font-size: clamp(0.9rem, 1.3vw, 1.2rem);
         margin-top: 0.6rem;
         color: var(--gray);
-      }
-
-      button {
-        font-family: "Poppins", sans-serif;
-        font-size: clamp(0.8rem, 1vw, 1rem);
-        width: 9vw;
-        max-width: 9rem;
-        min-width: 7rem;
-        display: inline;
-        border: none;
-        padding: 0.5rem 0;
-        border-radius: 10px;
-        margin-top: 20px;
-        cursor: pointer;
-        color: #fff;
-        background-color: var(--blue-dark-1);
-        border: 2px solid var(--blue-dark-1);
-        transition: background-color 0.2s ease, color 0.2s ease;
-
-        &:hover {
-          background-color: #fff;
-          color: var(--blue-dark-1);
-        }
       }
     }
 
@@ -84,13 +57,12 @@ import Name from "./Name";
     <Socials />
     <!-- Text -->
     <div class="hero-text">
-      <!-- <h1>Christian Fugarino</h1> -->
       <Name client:load />
       <h2>FRONT END DEVELOPER</h2>
       <p>
         Hi, I'm Christian. I know how to center a div.<br />Also, cats are better than dogs.
       </p>
-      <button aria-label="contact">Contact me!</button>
+      <ContactButton text="Contact me!" />
     </div>
     <!-- Image -->
     <div class="hero-img">
