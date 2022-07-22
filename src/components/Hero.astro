@@ -66,7 +66,26 @@ import Name from "./Name";
       }
 
       button {
-        max-width: 100px;
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(0.8rem, 1vw, 1.3rem);
+        width: 9vw;
+        max-width: 11rem;
+        min-width: 7rem;
+        display: inline;
+        border: none;
+        padding: 0.5rem 0;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        color: #fff;
+        background-color: var(--blue-dark-1);
+        border: 2px solid var(--blue-dark-1);
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: var(--blue-dark-1);
+        }
       }
     }
 
