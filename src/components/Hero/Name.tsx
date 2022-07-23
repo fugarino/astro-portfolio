@@ -4,7 +4,7 @@ import styles from "../../styles/name.module.scss";
 
 const Name: FC = () => {
   return (
-    <h1 className={styles.name}>
+    <h1 className={styles.name} style={{ minHeight: "80px" }}>
       <Typewriter
         onInit={(typewriter): void => {
           typewriter
