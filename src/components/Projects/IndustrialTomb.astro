@@ -4,21 +4,74 @@ import video from "../../../public/images/Hello world.mp4";
 
 <style lang="scss">
   article {
+    display: flex;
     height: 22rem;
     background-color: var(--orange-light-2);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     margin: 2rem 2rem 2rem 5rem;
 
-    video {
-      border-radius: 10px;
+    .text {
+      width: 50%;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--blue-dark-1);
+        text-align: center;
+      }
+
+      h4 {
+        color: rgb(70, 70, 70);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      h6 {
+        text-align: center;
+      }
+
+      ul {
+        padding-left: 1rem;
+      }
+    }
+
+    .visuals {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+
+      video {
+        border-radius: 10px;
+      }
     }
   }
 </style>
 
 <article>
-  <h1>Industrial Tomb</h1>
-  <video width="320" autoplay muted loop>
-    <source src={video} type="video/mp4" />
-  </video>
+  <div class="text">
+    <h3>Industrial Tomb</h3>
+    <h4>JavaScript Game</h4>
+    <h5>How to play:</h5>
+    <ul>
+      <li>Push the movable boxes onto their corresponding pressure plates</li>
+      <li>Press E to interact with the levers</li>
+    </ul>
+    <h5>Objective:</h5>
+    <ul>
+      <li>
+        Figure out the correct combination to solve the level and advance. There is only one. Good
+        Luck!
+      </li>
+    </ul>
+    <p>Learn more about how this was made on <a>github</a>.</p>
+    <p>HTML Canvas, JavaScript</p>
+  </div>
+  <div class="visuals">
+    <video width="370" autoplay muted loop>
+      <source src={video} type="video/mp4" />
+    </video>
+  </div>
 </article>
