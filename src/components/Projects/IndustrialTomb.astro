@@ -6,16 +6,16 @@ import video from "../../../public/images/Hello world.mp4";
   article {
     display: flex;
     height: 22rem;
-    // background-color: var(--orange-light-2);
     background-color: #252525;
-    // background-color: #373737;
     border-radius: 20px;
     padding: 2rem 2.5rem;
     margin: 2rem 2rem 2rem 5rem;
+    font-family: "Press Start 2P";
 
     .text {
-      width: 40%;
+      width: 50%;
       color: #fff;
+      padding: 0 2rem;
 
       h3 {
         font-size: 1.5rem;
@@ -46,18 +46,25 @@ import video from "../../../public/images/Hello world.mp4";
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 60%;
+      width: 50%;
 
       video {
         border-radius: 10px;
+        width: 90%;
+        max-width: 480px;
       }
+      // @media only screen and (min-width: 1600px) {
+      //   video {
+      //     width: 450px;
+      //   }
+      // }
     }
   }
 </style>
 
 <article>
   <div class="visuals">
-    <video width="370" autoplay muted loop>
+    <video autoplay muted loop>
       <source src={video} type="video/mp4" />
     </video>
   </div>
