@@ -1,0 +1,24 @@
+---
+import video from "../../../public/images/Hello world.mp4";
+---
+
+<style lang="scss">
+  article {
+    height: 22rem;
+    background-color: var(--orange-light-2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 2rem 2rem 5rem;
+
+    video {
+      border-radius: 10px;
+    }
+  }
+</style>
+
+<article>
+  <h1>Industrial Tomb</h1>
+  <video width="320" autoplay muted loop>
+    <source src={video} type="video/mp4" />
+  </video>
+</article>
