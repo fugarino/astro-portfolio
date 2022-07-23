@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from "react";
-import MenuButton from "./UI/MenuButton";
-import styles from "../styles/menu.module.scss";
+import MenuButton from "../UI/MenuButton";
+import styles from "../../styles/menu.module.scss";
 
 const Menu: FC = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);

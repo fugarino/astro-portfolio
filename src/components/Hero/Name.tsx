@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Typewriter from "typewriter-effect";
-import styles from "../styles/name.module.scss";
+import styles from "../../styles/name.module.scss";
 
 const Name: FC = () => {
   return (
