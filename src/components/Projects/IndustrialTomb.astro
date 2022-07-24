@@ -10,12 +10,13 @@ import video from "../../../public/images/Hello world.mp4";
     border-radius: 20px;
     padding: 2rem 2.5rem;
     margin: 2rem 2rem 2rem 5rem;
-    font-family: "Press Start 2P";
+    font-family: "Press Start 2P", sans-serif;
 
     .text {
       width: 50%;
       color: #fff;
       padding: 0 2rem;
+      padding-right: 0;
 
       h3 {
         font-size: 1rem;
@@ -40,12 +41,48 @@ import video from "../../../public/images/Hello world.mp4";
         font-size: 0.7rem;
       }
 
+      a {
+        font-size: 0.7rem;
+        color: rgb(220, 220, 220);
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          color: rgb(235, 235, 24);
+        }
+      }
+
       ul {
         padding-left: 1rem;
         font-size: 0.7rem;
         line-height: 15px;
         margin: 1rem 0;
         color: rgb(220, 220, 220);
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.2rem;
+
+        button {
+          padding: 0.5rem;
+          width: 160px;
+          font-family: "Press Start 2P", sans-serif;
+          font-size: 0.8rem;
+          border: none;
+          background-color: #252525;
+          color: rgb(220, 220, 220);
+          cursor: pointer;
+
+          &:first-child {
+            margin-right: 20px;
+          }
+          &:hover {
+            transform: scale(1.07);
+            color: #fff;
+          }
+        }
       }
     }
 
@@ -60,11 +97,18 @@ import video from "../../../public/images/Hello world.mp4";
         width: 90%;
         max-width: 480px;
       }
-      // @media only screen and (min-width: 1600px) {
-      //   video {
-      //     width: 450px;
-      //   }
-      // }
+    }
+  }
+  @media (min-width: 1700px) {
+    article {
+      margin-left: 17rem;
+
+      .text {
+        width: 57%;
+      }
+      .visuals {
+        width: 43%;
+      }
     }
   }
 </style>
@@ -85,12 +129,12 @@ import video from "../../../public/images/Hello world.mp4";
     </ul>
     <h5>Objective:</h5>
     <ul>
-      <li>
-        Figure out the correct combination to solve the level and advance. There is only one. Good
-        Luck!
-      </li>
+      <li>Figure out the correct combination to solve the level and advance. Good Luck!</li>
     </ul>
-    <p>Learn more about how this was made on <a>github</a>.</p>
-    <p>HTML Canvas, JavaScript</p>
+    <a>Learn more...</a>
+    <div class="buttons">
+      <button>Play Game</button>
+      <button>Source Code</button>
+    </div>
   </div>
 </article>
