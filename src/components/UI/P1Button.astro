@@ -1,0 +1,42 @@
+---
+const { text } = Astro.props;
+---
+
+<style lang="scss">
+  button {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.4rem;
+    box-shadow: 1px 1px 0px 0px #000, 2px 2px 0px 0px #000, 3px 3px 0px 0px #000,
+      4px 4px 0px 0px #000, 5px 5px 0px 0px #000;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-color: #000;
+    background-color: rgb(51, 51, 51);
+    // width: 220px;
+
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 0px 0px;
+      top: 5px;
+      left: 5px;
+    }
+  }
+</style>
+
+<button>{text}</button>

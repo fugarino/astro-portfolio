@@ -27,6 +27,7 @@ $slidein: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   max-width: 1800px;
   background-color: (var(--background-light));
   transition: background-color 0.3s ease;
+  z-index: 99;
 
   ul {
     @include flexCenter(right, center);
