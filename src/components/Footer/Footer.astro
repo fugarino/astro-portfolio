@@ -1,12 +1,26 @@
 ---
+import CvEmail from "../UI/CvEmail.astro";
 ---
 
 <style lang="scss">
   footer {
-    background-color: aliceblue;
+    // background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--orange);
+      padding-top: 4px;
+      margin-left: 25px;
+    }
   }
 </style>
 
 <footer>
-  <!-- footer content -->
+  <CvEmail />
+  <span>&copy; 2022 Christian Fugarino</span>
 </footer>
