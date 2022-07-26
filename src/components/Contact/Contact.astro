@@ -1,0 +1,134 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import Socials from "../UI/Socials.astro";
+---
+
+<style lang="scss">
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .socials {
+      position: absolute;
+      right: -1rem;
+      bottom: -2rem;
+    }
+
+    .contact-container {
+      margin: 3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      // width: 100%;
+      width: 50rem;
+      position: relative;
+
+      img {
+        width: 9rem;
+        top: -52px;
+        left: 80px;
+        position: absolute;
+      }
+
+      .helper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .contact-content {
+          background-color: var(--orange-light-1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 13rem;
+          border-radius: 10px;
+          padding: 2rem;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+
+          svg {
+            position: absolute;
+            bottom: -10px;
+            z-index: -1;
+          }
+
+          .contact-text {
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h5 {
+              color: var(--blue-dark-1);
+              font-size: 2rem;
+              font-weight: 600;
+            }
+
+            p {
+              color: #6c6a75;
+            }
+          }
+          .contact-button {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+              padding: 0.8rem 2.5rem;
+              border: 2px solid var(--orange);
+              border-radius: 7px;
+              background-color: var(--orange);
+              color: #fff;
+              font-size: 1rem;
+              cursor: pointer;
+              transition: background-color 0.2s ease, color 0.2s ease;
+
+              &:hover {
+                background-color: transparent;
+                color: var(--orange);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<SectionLayout sectionName="Contact">
+  <div class="container">
+    <div class="socials">
+      <Socials />
+    </div>
+    <div class="contact-container">
+      <img src="../../../images/javascript_laptop.svg" alt="laptop" />
+      <div class="helper">
+        <div class="contact-content">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#ffdcc4"
+              d="M0,256L48,261.3C96,267,192,277,288,266.7C384,256,480,224,576,202.7C672,181,768,171,864,186.7C960,203,1056,245,1152,229.3C1248,213,1344,139,1392,101.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+          <div class="contact-text">
+            <div>
+              <h5>Get in touch</h5>
+              <p>Have any questions? Shoot me an email.</p>
+            </div>
+          </div>
+          <div class="contact-button">
+            <button>Say hi!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</SectionLayout>

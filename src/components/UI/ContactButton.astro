@@ -1,8 +1,8 @@
 ---
-const { text } = Astro.props;
+const { text, backgroundColor, hoverBackgroundColor, border } = Astro.props;
 ---
 
-<style lang="scss">
+<style lang="scss" define:vars={{ backgroundColor, hoverBackgroundColor, border }}>
   button {
     font-family: "Poppins", sans-serif;
     font-size: clamp(0.8rem, 1vw, 1rem);
@@ -16,13 +16,13 @@ const { text } = Astro.props;
     margin-top: 20px;
     cursor: pointer;
     color: #fff;
-    background-color: var(--blue-dark-1);
-    border: 2px solid var(--blue-dark-1);
+    background-color: var(--backgroundColor);
+    border: var(--border);
     transition: background-color 0.2s ease, color 0.2s ease;
 
     &:hover {
-      background-color: #fff;
-      color: var(--blue-dark-1);
+      background-color: var(--hoverBackgroundColor);
+      color: var(--backgroundColor);
     }
   }
 </style>
