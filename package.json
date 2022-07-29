@@ -17,6 +17,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@nanostores/react": "^0.2.0",
+    "nanostores": "^0.5.12",
     "sass": "^1.53.0",
     "typewriter-effect": "^2.19.0"
   }
