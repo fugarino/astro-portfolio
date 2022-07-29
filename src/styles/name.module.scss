@@ -2,4 +2,17 @@
   font-size: clamp(2.5rem, 4vw, 4rem);
   color: var(--blue-dark-1);
   z-index: -1;
+  min-height: 65px;
+}
+
+@media (min-width: 1200px) {
+  .name {
+    min-height: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .name {
+    min-height: 90px;
+  }
 }
