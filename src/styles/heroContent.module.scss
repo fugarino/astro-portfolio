@@ -1,0 +1,62 @@
+@mixin flexCenter($align-items: "") {
+  display: flex;
+  justify-content: center;
+  align-items: $align-items;
+}
+
+.heroGrid {
+  @include flexCenter();
+  margin: 0 auto;
+
+  .heroText {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    max-width: 635px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: clamp(1.25rem, 2vw, 2rem);
+      font-weight: 500;
+      // color: var(--gray-dark);
+    }
+
+    p {
+      font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+      margin-top: 0.6rem;
+    }
+  }
+
+  .heroImg {
+    @include flexCenter(center);
+    width: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      max-width: 700px;
+    }
+  }
+}
+
+.dark {
+  h2 {
+    color: rgb(219, 219, 219);
+  }
+
+  p {
+    color: rgb(183, 183, 183);
+  }
+}
+
+.light {
+  h2 {
+    color: var(--gray-dark);
+  }
+
+  p {
+    color: var(--gray);
+  }
+}

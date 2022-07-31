@@ -4,7 +4,8 @@
   height: 40px;
   cursor: pointer;
   outline: none;
-  background-color: var(--background-light);
+  // background-color: var(--background-light);
+  background-color: transparent;
 
   &::before,
   &::after {
@@ -32,5 +33,12 @@
   }
   &::after {
     transform: translateY(-5.2px) rotate(-45deg);
+  }
+}
+
+.dark {
+  &::before,
+  &::after {
+    background-color: rgb(255, 255, 255);
   }
 }

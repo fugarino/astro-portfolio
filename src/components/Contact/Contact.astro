@@ -1,6 +1,6 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import Socials from "../UI/Socials.astro";
+import Socials from "../UI/Socials";
 ---
 
 <style lang="scss">
@@ -106,7 +106,7 @@ import Socials from "../UI/Socials.astro";
 <SectionLayout sectionName="Contact">
   <div class="container">
     <div class="socials">
-      <Socials />
+      <Socials client:load />
     </div>
     <div class="contact-container">
       <img src="../../../images/javascript_laptop.svg" alt="laptop" />

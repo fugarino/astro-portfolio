@@ -1,5 +1,6 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import Skill from "./Skill";
 ---
 
 <style lang="scss">
@@ -39,27 +40,27 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
   <ul class="grid">
     <li>
       <i class="devicon-html5-plain colored"></i>
-      <h4>HTML</h4>
+      <Skill name="HTML" client:idle />
     </li>
     <li>
       <i class="devicon-sass-original colored"></i>
-      <h4>CSS / SCSS</h4>
+      <Skill name="CSS / SCSS" client:idle />
     </li>
     <li>
       <i class="devicon-javascript-plain colored"></i>
-      <h4>JavaScript</h4>
+      <Skill name="JavaScript" client:idle />
     </li>
     <li>
       <i class="devicon-typescript-plain colored"></i>
-      <h4>TypeScript</h4>
+      <Skill name="TypeScript" client:idle />
     </li>
     <li>
       <i class="devicon-react-original colored"></i>
-      <h4>React</h4>
+      <Skill name="React" client:idle />
     </li>
     <li>
       <i class="devicon-redux-original colored"></i>
-      <h4>Redux</h4>
+      <Skill name="Redux" client:idle />
     </li>
     <li>
       <svg
@@ -109,19 +110,19 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
           </linearGradient>
         </defs>
       </svg>
-      <h4>Astro</h4>
+      <Skill name="Astro" client:idle />
     </li>
     <li>
       <i class="devicon-nextjs-original colored"></i>
-      <h4>Next.js</h4>
+      <Skill name="Next.js" client:idle />
     </li>
     <li>
       <i class="devicon-jest-plain colored"></i>
-      <h4>Jest</h4>
+      <Skill name="Jest" client:idle />
     </li>
     <li>
       <i class="devicon-git-plain colored"></i>
-      <h4>Git</h4>
+      <Skill name="Git" client:idle />
     </li>
   </ul>
 </SectionLayout>

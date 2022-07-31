@@ -1,5 +1,5 @@
 ---
-import CvEmail from "../UI/CvEmail.astro";
+import CvEmail from "../UI/CvEmail";
 import Menu from "./Menu";
 ---
 
@@ -35,7 +35,7 @@ import Menu from "./Menu";
 <nav>
   <div>
     <a href="/" class="logo">CRIS</a>
-    <CvEmail />
+    <CvEmail client:load />
   </div>
   <Menu client:load />
 </nav>

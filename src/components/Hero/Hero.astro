@@ -1,77 +1,11 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import Socials from "../UI/Socials.astro";
-import Name from "./Name";
-import ContactButton from "../UI/ContactButton.astro";
+// import Socials from "../UI/Socials";
+// import Name from "./Name";
+// import ContactButton from "../UI/ContactButton.astro";
+import HeroContent from "./HeroContent";
 ---
 
-<style lang="scss">
-  @mixin flexCenter($align-items: "") {
-    display: flex;
-    justify-content: center;
-    align-items: $align-items;
-  }
-
-  .hero-grid {
-    @include flexCenter();
-    margin: 0 auto;
-
-    .hero-text {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      width: 50%;
-      max-width: 635px;
-      margin: 0 auto;
-
-      h2 {
-        font-size: clamp(1.25rem, 2vw, 2rem);
-        font-weight: 500;
-        color: var(--gray-dark);
-      }
-
-      p {
-        font-size: clamp(0.9rem, 1.3vw, 1.2rem);
-        margin-top: 0.6rem;
-        color: var(--gray);
-      }
-    }
-
-    .hero-img {
-      @include flexCenter(center);
-      width: 50%;
-
-      img {
-        width: 100%;
-        height: auto;
-        pointer-events: none;
-        max-width: 700px;
-      }
-    }
-  }
-</style>
-
 <SectionLayout sectionName="About Me">
-  <!-- Grid -->
-  <div class="hero-grid">
-    <Socials />
-    <!-- Text -->
-    <div class="hero-text">
-      <Name client:load />
-      <h2>FRONT END DEVELOPER</h2>
-      <p>
-        Hi, I'm Christian. I know how to center a div.<br />Also, cats are better than dogs.
-      </p>
-      <ContactButton
-        text="Contact me!"
-        backgroundColor="var(--blue-dark-1)"
-        hoverBackgroundColor="var(#fff)"
-        border="2px solid var(--blue-dark-1)"
-      />
-    </div>
-    <!-- Image -->
-    <div class="hero-img">
-      <img width="1810" height="1512" src="/images/ezgif.com-gif-maker.gif" alt="hero img" />
-    </div>
-  </div>
+  <HeroContent client:load />
 </SectionLayout>

@@ -1,0 +1,39 @@
+@mixin flexCenter($align-items: "") {
+  display: flex;
+  justify-content: center;
+  align-items: $align-items;
+}
+
+.aside {
+  @include flexCenter(flex-end);
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+  margin-right: 1.5rem;
+
+  button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 13px;
+    background-color: transparent;
+
+    svg {
+      fill: var(--gray);
+      transition: all 0.1s ease;
+
+      &:hover {
+        fill: var(--orange);
+      }
+    }
+  }
+}
+
+.dark {
+  button {
+    svg {
+      fill: rgb(182, 182, 182);
+    }
+  }
+}

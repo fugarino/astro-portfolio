@@ -1,0 +1,25 @@
+.aside {
+  font-size: 0.8rem;
+  margin-left: 20px;
+  color: var(--gray-dark);
+  position: relative;
+  top: 6px;
+
+  a {
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.dark {
+  color: rgb(224, 224, 224);
+
+  a {
+    cursor: pointer;
+    &:hover {
+      color: rgb(199, 199, 199);
+    }
+  }
+}
